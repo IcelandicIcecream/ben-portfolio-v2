@@ -1,0 +1,15 @@
+package components
+
+script TypingEffect(word, id string, delay int) {
+let index = 0;
+	const displayArea = document.getElementById(id)
+
+  const intervalId = setInterval(function () {
+    if (index < word.length) {
+      displayArea.textContent += word[index]
+      index++
+    } else {
+      clearInterval(intervalId)
+    }
+  }, delay);
+}

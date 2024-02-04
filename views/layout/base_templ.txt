@@ -1,0 +1,2 @@
+<html><head><script src=\"https://cdn.tailwindcss.com\"></script><script src=\"https://unpkg.com/hyperscript.org@0.0.4\"></script><link rel=\"preconnect\" href=\"https://fonts.googleapis.com\"><link rel=\"preconnect\" href=\"https://fonts.gstatic.com\" crossorigin><link href=\"https://fonts.googleapis.com/css2?family=Workbench&amp;display=swap\" rel=\"stylesheet\"><link rel=\"stylesheet\" href=\"/styles/tailwind.css\"></head><body class=\"bg-gray-900\">
+</body></html>
