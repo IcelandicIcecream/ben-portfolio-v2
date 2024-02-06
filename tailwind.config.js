@@ -3,9 +3,7 @@ module.exports = {
   content: ["./views/**/*.templ"],
   theme: {
     extend: {
-      fontFamily: {
-        workbench: ["Workbench", "sans-serif"],
-      },
+      fontFamily: {},
     },
   },
   plugins: [],

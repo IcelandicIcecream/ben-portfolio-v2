@@ -2,21 +2,26 @@ package layout
 
 import (
 	components "github.com/icelandicicecream/ben-portfolio-v2/views/components"
+	model "github.com/icelandicicecream/ben-portfolio-v2/model"
 )
 
-templ Base(isMobileMenuOpen bool) {
+templ Base(state model.State) {
 	<html>
 		<head>
 			<script src="https://cdn.tailwindcss.com"></script>
-			<script src="https://unpkg.com/hyperscript.org@0.0.4"></script>
+			<script src="https://unpkg.com/htmx.org@1.9.9" integrity="sha384-QFjmbokDn2DjBjq+fM+8LUIVrAgqcNW2s0PjAxHETgRn9l4fvX31ZxDxvwQnyMOX" crossorigin="anonymous"></script>
+			<script src="https://unpkg.com/hyperscript.org@0.9.12"></script>
 			<link rel="preconnect" href="https://fonts.googleapis.com"/>
 			<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-			<link href="https://fonts.googleapis.com/css2?family=Workbench&display=swap" rel="stylesheet"/>
 			<link rel="stylesheet" href="/styles/tailwind.css"/>
 		</head>
 		<body class="bg-gray-900">
-			@components.NavBar(isMobileMenuOpen)
-			{ children... }
+			<header>
+				@components.NavBar(state)
+			</header>
+			<main>
+				{ children... }
+			</main>
 		</body>
 	</html>
 }

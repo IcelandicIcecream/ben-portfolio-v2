@@ -12,11 +12,12 @@ import "bytes"
 
 import "github.com/icelandicicecream/ben-portfolio-v2/views/layout"
 import "github.com/icelandicicecream/ben-portfolio-v2/views/components"
+import "github.com/icelandicicecream/ben-portfolio-v2/model"
 
 var heroTitle = "Hey, my name is Ben"
-var heroSubtitle = "I'm a software developer, working mainly on backend and web development."
+var heroSubtitle = "I'm a full stack developer, working mainly on backend and web development."
 
-func Home() templ.Component {
+func Home(state model.State) templ.Component {
 	return templ.ComponentFunc(func(ctx context.Context, templ_7745c5c3_W io.Writer) (templ_7745c5c3_Err error) {
 		templ_7745c5c3_Buffer, templ_7745c5c3_IsBuffer := templ_7745c5c3_W.(*bytes.Buffer)
 		if !templ_7745c5c3_IsBuffer {
@@ -44,7 +45,7 @@ func Home() templ.Component {
 			}
 			return templ_7745c5c3_Err
 		})
-		templ_7745c5c3_Err = layout.Base().Render(templ.WithChildren(ctx, templ_7745c5c3_Var2), templ_7745c5c3_Buffer)
+		templ_7745c5c3_Err = layout.Base(state).Render(templ.WithChildren(ctx, templ_7745c5c3_Var2), templ_7745c5c3_Buffer)
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
