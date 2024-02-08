@@ -8,6 +8,7 @@ import (
 func main() {
 	app := echo.New()
 	app.Static("/styles", "styles")
+	app.Static("/assets", "assets")
 
 	handlers := handlers.Handler{}
 

@@ -14,8 +14,8 @@ import "github.com/icelandicicecream/ben-portfolio-v2/views/layout"
 import "github.com/icelandicicecream/ben-portfolio-v2/views/components"
 import "github.com/icelandicicecream/ben-portfolio-v2/model"
 
-var heroTitle = "Hey, my name is Ben"
-var heroSubtitle = "I'm a full stack developer, working mainly on backend and web development."
+var heroTitle = "Full-stack developer, tech and video game enthusiast"
+var heroSubtitle = "I'm Ben, a full-stack developer based in Kuala Lumpur, Malaysia. I ventured into the tech world by accident, with a mechanical engineering degree after working for a music company."
 
 func Home(state model.State) templ.Component {
 	return templ.ComponentFunc(func(ctx context.Context, templ_7745c5c3_W io.Writer) (templ_7745c5c3_Err error) {
@@ -40,6 +40,14 @@ func Home(state model.State) templ.Component {
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
+			templ_7745c5c3_Err = components.TechCards(state).Render(ctx, templ_7745c5c3_Buffer)
+			if templ_7745c5c3_Err != nil {
+				return templ_7745c5c3_Err
+			}
+			templ_7745c5c3_Err = templ.WriteWatchModeString(templ_7745c5c3_Buffer, 2)
+			if templ_7745c5c3_Err != nil {
+				return templ_7745c5c3_Err
+			}
 			if !templ_7745c5c3_IsBuffer {
 				_, templ_7745c5c3_Err = io.Copy(templ_7745c5c3_W, templ_7745c5c3_Buffer)
 			}
@@ -50,10 +58,6 @@ func Home(state model.State) templ.Component {
 			return templ_7745c5c3_Err
 		}
 		templ_7745c5c3_Err = components.TypingEffect(heroTitle, "hero-title", 100).Render(ctx, templ_7745c5c3_Buffer)
-		if templ_7745c5c3_Err != nil {
-			return templ_7745c5c3_Err
-		}
-		templ_7745c5c3_Err = components.TypingEffect(heroSubtitle, "hero-subtitle", 50).Render(ctx, templ_7745c5c3_Buffer)
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}

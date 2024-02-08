@@ -4,13 +4,7 @@ import model "github.com/icelandicicecream/ben-portfolio-v2/model"
 
 templ NavBar(state model.State) {
 	<header class="bg-gray-900 bg-opacity-0">
-		<nav class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
-			<div class="flex lg:flex-1">
-				<a href="#" class="-m-1.5 p-1.5">
-					<span class="sr-only">Ben</span>
-					<img class="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=white" alt=""/>
-				</a>
-			</div>
+		<nav class="mx-auto flex max-w-7xl items-center justify-end p-6 lg:px-8" aria-label="Global">
 			<div class="flex lg:hidden">
 				<button type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-400" hx-get="/open-mobile-navbar" hx-trigger="click" hx-target="#mobile-navbar" hx-swap="innerHTML">
 					<span class="sr-only">Open main menu</span>
@@ -20,10 +14,10 @@ templ NavBar(state model.State) {
 				</button>
 			</div>
 			<div class="hidden lg:flex lg:gap-x-12">
-				<a href="#" class="text-sm font-semibold leading-6 text-white">Home</a>
-				<a href="#" class="text-sm font-semibold leading-6 text-white">Code</a>
-				<a href="#" class="text-sm font-semibold leading-6 text-white">Design</a>
-				<a href="#" class="text-sm font-semibold leading-6 text-white">Contact</a>
+				<a href="/" class="text-sm font-semibold leading-6 text-gray-600">Home</a>
+				<a href="/tech" class="text-sm font-semibold leading-6 text-gray-600">Tech</a>
+				<a href="/design" class="text-sm font-semibold leading-6 text-gray-600">Design</a>
+				<a href="/contact" class="text-sm font-semibold leading-6 text-gray-600">Contact</a>
 			</div>
 		</nav>
 		<div id="mobile-navbar"></div>

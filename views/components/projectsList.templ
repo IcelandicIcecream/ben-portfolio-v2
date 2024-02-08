@@ -1,0 +1,59 @@
+package components 
+
+import model "github.com/icelandicicecream/ben-portfolio-v2/model"
+
+var projects = []model.ProjectCard{
+	{
+		Title:       "Accounting Software",
+		Tags:        []string{"Go", "Svelte Kit", "PostgreSQL"},
+		Date:        "Mar 16, 2020",
+		Description: "An accounting software that consolidates data from multiple sources, standardises them and generates reports from it. ",
+		Link:        "#",
+	},
+	{
+		Title:       "Teh Ultimate Bill Splitter",
+		Tags:        []string{"Next JS", "React", "Vercel"},
+		Date:        "Mar 16, 2020",
+		Description: "An accounting software that consolidates data from multiple sources, standardises them and generates reports from it. ",
+		Link:        "#",
+	},
+	{
+		Title:       "Music Company Website",
+		Tags:        []string{"Wordpress", "Woocommerce", "CSS"},
+		Date:        "Mar 16, 2020",
+		Description: "An accounting software that consolidates data from multiple sources, standardises them and generates reports from it. ",
+		Link:        "#",
+	},
+}
+
+templ ProjectList(state model.State) {
+	<div class="bg-white py-8 sm:py-14 shadow-md ring-1 ring-gray-900/5 rounded-xl sm:rounded-md">
+		<div class="mx-auto max-w-7xl px-6 lg:px-12">
+			<h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Projects</h2>
+			<p class="mt-2 text-lg leading-8 text-gray-600">Here are the projects that I've worked on recently</p>
+			<div class="border-t border-gray-200 sm:mt-8 sm:pt-8 divide-y divide-gray-200">
+				for _, project := range projects {
+					<article class="flex max-w-xl flex-col items-start justify-between">
+						<div class="mb-4 flex items-center gap-x-4 text-xs mt-6">
+							<time class="text-gray-500">{ project.Date }</time>
+							<span class="flex flex-row items-center gap-x-2 text-xs">
+								for _, tag := range project.Tags {
+									<p class="relative z-10 rounded-md bg-indigo-50 px-3 py-1.5 font-medium text-gray-600 hover:bg-gray-100">{ tag }</p>
+								}
+							</span>
+						</div>
+						<div class="group relative">
+							<h3 class="mb-2 text-lg font-semibold leading-6 text-gray-900 group-hover:text-gray-600">
+								<a href={ project.Link }>
+									<span class="absolute inset-0"></span>
+									{ project.Title }
+								</a>
+							</h3>
+							<p class="mb-6 line-clamp-3 text-sm leading-6 text-gray-600">{ project.Description }</p>
+						</div>
+					</article>
+				}
+			</div>
+		</div>
+	</div>
+}
