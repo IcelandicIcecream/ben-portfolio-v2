@@ -1,7 +1,7 @@
 <div class=\"hidden sm:absolute sm:-top-10 sm:right-1/2 sm:-z-10 sm:mr-10 sm:block sm:transform-gpu sm:blur-3xl\"></div><div class=\"mx-auto max-w-7xl px-6 lg:px-8 flex flex-row w-full justify-between\"><div>
-</div><div class=\"bg-white p-10 shadow-md ring-1 ring-gray-900/5 rounded-xl sm:rounded-md\"><p class=\"text-sm font-semibold leading-8 text-gray-900 mb-4\">Here are a few technologies I've been working with recently:</p><span class=\"flex items-center justify-end gap-x-2 text-xs leading-5 text-gray-500 max-w-sm\"><p>Ratings on my cool-o-meter:</p></span><ul role=\"list\" class=\"divide-y divide-gray-300\">
-<li class=\"flex flex-wrap items-center justify-between gap-x-6 gap-y-4 py-3 sm:flex-nowrap\"><div><p class=\"text-sm font-semibold leading-6 text-gray-900\"><a href=\"
-\" class=\"hover:underline\">
+</div><div class=\"bg-white p-10 shadow-xl ring-1 ring-gray-900/5 rounded-xl sm:rounded-md bg-opacity-40\"><p class=\"text-sm font-semibold leading-8 text-gray-600 mb-4\">Here are a few technologies I've been working with recently:</p><span class=\"flex items-center justify-end gap-x-2 text-xs leading-5 text-gray-500 max-w-sm\"><p>Ratings on my cool-o-meter:</p></span><ul role=\"list\" class=\"divide-y divide-gray-300\">
+<li class=\"flex flex-wrap items-center justify-between gap-x-6 gap-y-4 py-3 sm:flex-nowrap\"><div><p class=\"text-sm font-semibold leading-6 text-gray-600\"><a href=\"
+\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"hover:underline\">
 </a></p></div><dl class=\"flex w-full flex-none justify-between gap-x-8 sm:w-auto\"><div class=\"flex -space-x-0.5\"><dd><div class=\"flex items-center gap-x-2 text-xs leading-5 text-gray-500\"><p>
 /10</p></div></dd></div></dl></li>
 </ul></div></div>

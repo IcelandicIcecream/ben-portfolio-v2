@@ -14,7 +14,7 @@ import model "github.com/icelandicicecream/ben-portfolio-v2/model"
 
 var projects = []model.ProjectCard{
 	{
-		Title:       "Accounting Software",
+		Title:       "Accounting Database Management Platform",
 		Tags:        []string{"Go", "Svelte Kit", "PostgreSQL"},
 		Date:        "Mar 16, 2020",
 		Description: "An accounting software that consolidates data from multiple sources, standardises them and generates reports from it. ",
@@ -22,16 +22,16 @@ var projects = []model.ProjectCard{
 	},
 	{
 		Title:       "Teh Ultimate Bill Splitter",
-		Tags:        []string{"Next JS", "React", "Vercel"},
+		Tags:        []string{"React", "Vercel"},
 		Date:        "Mar 16, 2020",
-		Description: "An accounting software that consolidates data from multiple sources, standardises them and generates reports from it. ",
+		Description: "A real-time bill splitting single-page application made to handle tax, discounts and delivery fees",
 		Link:        "#",
 	},
 	{
 		Title:       "Music Company Website",
 		Tags:        []string{"Wordpress", "Woocommerce", "CSS"},
 		Date:        "Mar 16, 2020",
-		Description: "An accounting software that consolidates data from multiple sources, standardises them and generates reports from it. ",
+		Description: "A business site meant to showcase the company's services, artists and handle merch transactions via stripe and woocommerce.",
 		Link:        "#",
 	},
 }
@@ -79,7 +79,7 @@ func ProjectList(state model.State) templ.Component {
 				var templ_7745c5c3_Var3 string
 				templ_7745c5c3_Var3, templ_7745c5c3_Err = templ.JoinStringErrs(tag)
 				if templ_7745c5c3_Err != nil {
-					return templ.Error{Err: templ_7745c5c3_Err, FileName: `views/components/projectsList.templ`, Line: 40, Col: 119}
+					return templ.Error{Err: templ_7745c5c3_Err, FileName: `views/components/projectsList.templ`, Line: 40, Col: 120}
 				}
 				_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var3))
 				if templ_7745c5c3_Err != nil {
