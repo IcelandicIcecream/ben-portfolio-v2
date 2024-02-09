@@ -16,7 +16,7 @@ func main() {
 
 	app.GET("/open-mobile-navbar", handlers.OpenMobileNavbar)
 
-	err := app.Start(":3000")
+	err := app.Start(":8080")
 	if err != nil {
 		panic(err)
 	}
