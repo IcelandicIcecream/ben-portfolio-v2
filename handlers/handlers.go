@@ -20,6 +20,10 @@ func (h Handler) OpenMobileNavbar(c echo.Context) error {
 	return renderView(c, components.MobileNavBar())
 }
 
+func (h Handler) CheckHealth(c echo.Context) error {
+	return c.String(200, "The echo server is up and running! 🚀")
+}
+
 func renderView(c echo.Context, component templ.Component) error {
 	return component.Render(c.Request().Context(), c.Response())
 }

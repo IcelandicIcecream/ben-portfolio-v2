@@ -1,23 +1,34 @@
 package main
 
 import (
-	"github.com/icelandicicecream/ben-portfolio-v2/handlers"
-	"github.com/labstack/echo/v4"
+	"log"
+	"os"
+
+	"github.com/icelandicicecream/ben-portfolio-v2/sentry"
+	"github.com/icelandicicecream/ben-portfolio-v2/server"
 )
 
 func main() {
-	app := echo.New()
-	app.Static("/styles", "styles")
-	app.Static("/assets", "assets")
+	sentryInstance := sentry.Sentry{}
+	server := server.Server{}
 
-	handlers := handlers.Handler{}
-
-	app.GET("/", handlers.Home)
-
-	app.GET("/open-mobile-navbar", handlers.OpenMobileNavbar)
-
-	err := app.Start(":8080")
+	app := server.Start()
+	err := sentryInstance.Init()
 	if err != nil {
+		log.Fatalf("sentry.Init: %s", err)
+	}
+
+	defer sentryInstance.Flush(2)
+
+	port := os.Getenv("PORT")
+	if port == "" {
+		port = "8080"
+		log.Printf("Defaulting to port %s", port)
+	}
+
+	err = app.Start(":" + port)
+	if err != nil {
+		sentryInstance.CaptureMessage("app.Start: " + err.Error())
 		panic(err)
 	}
 }
