@@ -14,25 +14,41 @@ import model "github.com/icelandicicecream/ben-portfolio-v2/model"
 
 var projects = []model.ProjectCard{
 	{
+		// Create a write-up
 		Title:       "Accounting Database Management Platform",
 		Tags:        []string{"Go", "Svelte Kit", "PostgreSQL"},
-		Date:        "Mar 16, 2020",
+		Date:        "Jun 25, 2023 - Present",
 		Description: "An accounting software that consolidates data from multiple sources, standardises them and generates reports from it. ",
 		Link:        "#",
 	},
 	{
+		// Create a write-up
+		Title:       "Go Discord Music Bot",
+		Tags:        []string{"Go", "Discord API", "Youtube API"},
+		Date:        "Aug 6, 2023",
+		Description: "A discord bot that plays music from youtube I built for my gaming sessions with my friends on discord.",
+		Link:        "#",
+	},
+	{
+		Title:       "Single Release Landing Page",
+		Tags:        []string{"NextJS", "React", "TailwindCSS"},
+		Date:        "Apr 12, 2023",
+		Description: "A landing page for a musical artist single release. Made it in style of the 2000s, with a retro design.",
+		Link:        "https://talitha-6hrs.vercel.app/",
+	},
+	{
 		Title:       "Teh Ultimate Bill Splitter",
 		Tags:        []string{"React", "Vercel"},
-		Date:        "Mar 16, 2020",
-		Description: "A real-time bill splitting single-page application made to handle tax, discounts and delivery fees",
-		Link:        "#",
+		Date:        "Aug 30, 2022",
+		Description: "A real-time bill splitting single-page application made to handle tax, discounts and delivery fees.",
+		Link:        "https://tehlunchcalculator.vercel.app",
 	},
 	{
 		Title:       "Music Company Website",
 		Tags:        []string{"Wordpress", "Woocommerce", "CSS"},
-		Date:        "Mar 16, 2020",
+		Date:        "Dec 20, 2020",
 		Description: "A business site meant to showcase the company's services, artists and handle merch transactions via stripe and woocommerce.",
-		Link:        "#",
+		Link:        "https://breakingmusic.my/",
 	},
 }
 
@@ -61,7 +77,7 @@ func ProjectList(state model.State) templ.Component {
 			var templ_7745c5c3_Var2 string
 			templ_7745c5c3_Var2, templ_7745c5c3_Err = templ.JoinStringErrs(project.Date)
 			if templ_7745c5c3_Err != nil {
-				return templ.Error{Err: templ_7745c5c3_Err, FileName: `views/components/projectsList.templ`, Line: 37, Col: 49}
+				return templ.Error{Err: templ_7745c5c3_Err, FileName: `views/components/projectsList.templ`, Line: 56, Col: 50}
 			}
 			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var2))
 			if templ_7745c5c3_Err != nil {
@@ -79,7 +95,7 @@ func ProjectList(state model.State) templ.Component {
 				var templ_7745c5c3_Var3 string
 				templ_7745c5c3_Var3, templ_7745c5c3_Err = templ.JoinStringErrs(tag)
 				if templ_7745c5c3_Err != nil {
-					return templ.Error{Err: templ_7745c5c3_Err, FileName: `views/components/projectsList.templ`, Line: 40, Col: 120}
+					return templ.Error{Err: templ_7745c5c3_Err, FileName: `views/components/projectsList.templ`, Line: 59, Col: 121}
 				}
 				_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var3))
 				if templ_7745c5c3_Err != nil {
@@ -106,7 +122,7 @@ func ProjectList(state model.State) templ.Component {
 			var templ_7745c5c3_Var5 string
 			templ_7745c5c3_Var5, templ_7745c5c3_Err = templ.JoinStringErrs(project.Title)
 			if templ_7745c5c3_Err != nil {
-				return templ.Error{Err: templ_7745c5c3_Err, FileName: `views/components/projectsList.templ`, Line: 48, Col: 24}
+				return templ.Error{Err: templ_7745c5c3_Err, FileName: `views/components/projectsList.templ`, Line: 67, Col: 25}
 			}
 			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var5))
 			if templ_7745c5c3_Err != nil {
@@ -119,7 +135,7 @@ func ProjectList(state model.State) templ.Component {
 			var templ_7745c5c3_Var6 string
 			templ_7745c5c3_Var6, templ_7745c5c3_Err = templ.JoinStringErrs(project.Description)
 			if templ_7745c5c3_Err != nil {
-				return templ.Error{Err: templ_7745c5c3_Err, FileName: `views/components/projectsList.templ`, Line: 51, Col: 89}
+				return templ.Error{Err: templ_7745c5c3_Err, FileName: `views/components/projectsList.templ`, Line: 70, Col: 90}
 			}
 			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var6))
 			if templ_7745c5c3_Err != nil {

@@ -10,10 +10,7 @@ type Sentry struct{}
 
 func (s Sentry) Init() error {
 	err := sentry.Init(sentry.ClientOptions{
-		Dsn: "https://57c983391500f6aeeb84ffd1f77fc84b@o4506716010971136.ingest.sentry.io/4506716011167744",
-		// Set TracesSampleRate to 1.0 to capture 100%
-		// of transactions for performance monitoring.
-		// We recommend adjusting this value in production,
+		Dsn:              "https://57c983391500f6aeeb84ffd1f77fc84b@o4506716010971136.ingest.sentry.io/4506716011167744",
 		TracesSampleRate: 1.0,
 	})
 	if err != nil {

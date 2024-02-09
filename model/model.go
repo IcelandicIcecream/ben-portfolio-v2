@@ -2,10 +2,11 @@ package model
 
 import (
 	"github.com/a-h/templ"
+	"github.com/rs/zerolog"
 )
 
 type State struct {
-	IsMobileNavBarOpen bool
+	Logger *zerolog.Logger
 }
 
 type TechCard struct {

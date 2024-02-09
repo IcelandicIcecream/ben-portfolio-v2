@@ -13,17 +13,18 @@ type Handler struct {
 }
 
 func (h Handler) Home(c echo.Context) error {
-	return renderView(c, home.Home(h.state))
+	return Render(c, home.Home(h.state))
 }
 
 func (h Handler) OpenMobileNavbar(c echo.Context) error {
-	return renderView(c, components.MobileNavBar())
+	return Render(c, components.MobileNavBar())
 }
 
 func (h Handler) CheckHealth(c echo.Context) error {
 	return c.String(200, "The echo server is up and running! 🚀")
 }
 
-func renderView(c echo.Context, component templ.Component) error {
-	return component.Render(c.Request().Context(), c.Response())
+func Render(c echo.Context, t templ.Component) error {
+	c.Response().Header().Set(echo.HeaderContentType, echo.MIMETextHTML)
+	return t.Render(c.Request().Context(), c.Response().Writer)
 }
