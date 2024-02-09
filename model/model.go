@@ -23,3 +23,8 @@ type ProjectCard struct {
 	Description string
 	Link        templ.SafeURL
 }
+
+type PageLink struct {
+	Name string
+	Link templ.SafeURL
+}
