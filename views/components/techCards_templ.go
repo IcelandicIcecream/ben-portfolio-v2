@@ -117,7 +117,7 @@ func TechCards(state model.State) templ.Component {
 				return templ_7745c5c3_Err
 			}
 		}
-		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</ul></div><div class=\"mt-4 max-w-xl text-sm text-gray-500 text-center\"><p>I also do a bit creative design work by the side.</p><a href=\"https://www.behance.net/benjaminsinidol\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"font-semibold text-teal-600 hover:text-indigo-500\">Check out my behance <span aria-hidden=\"true\">&rarr;</span></a></div><p class=\"text-sm leading-5 text-gray-500 pt-8 text-center\">This site was made purely in Go (Echo + Templ) and Tailwind CSS.</p></div></div>")
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</ul></div><div class=\"mt-4 max-w-xl text-sm text-gray-500 text-center\"><p>I also do a bit creative design work by the side.</p><a href=\"https://www.behance.net/benjaminsinidol\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"font-semibold text-teal-600 hover:text-indigo-500\">Check out my behance <span aria-hidden=\"true\">&rarr;</span></a></div><p class=\"text-sm leading-5 text-gray-500 pt-8 text-center\">This <a href=\"https://github.com/IcelandicIcecream/ben-portfolio-v2\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"underline\">site</a> was made purely in Go (Echo + Templ) and Tailwind CSS.</p></div></div>")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}

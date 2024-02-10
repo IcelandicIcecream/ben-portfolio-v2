@@ -15,19 +15,19 @@ import model "github.com/icelandicicecream/ben-portfolio-v2/model"
 var projects = []model.ProjectCard{
 	{
 		// Create a write-up
-		Title:       "Accounting Database Management Platform",
-		Tags:        []string{"Go", "Svelte Kit", "PostgreSQL"},
-		Date:        "Jun 25, 2023 - Present",
-		Description: "An accounting software that consolidates data from multiple sources, standardises them and generates reports from it. ",
-		Link:        "#",
-	},
-	{
-		// Create a write-up
 		Title:       "Go Discord Music Bot",
 		Tags:        []string{"Go", "Discord API", "Youtube API"},
 		Date:        "Aug 6, 2023",
 		Description: "A discord bot that plays music from youtube I built for my gaming sessions with my friends on discord.",
-		Link:        "#",
+		Link:        "https://road-fire-8e8.notion.site/Go-Discord-Music-Bot-4d2531428ea84f268889e8f882015128?pvs=4",
+	},
+	{
+		// Create a write-up
+		Title:       "Accounting Database Management Platform",
+		Tags:        []string{"Go", "Svelte Kit", "PostgreSQL"},
+		Date:        "Jun 25, 2023 - Present",
+		Description: "An accounting software that consolidates data from multiple sources, standardises them and generates reports from it. ",
+		Link:        "https://road-fire-8e8.notion.site/Accounting-Database-Management-Platform-f1c57b8de94a4cb9bea7e2fdb4fec744?pvs=4",
 	},
 	{
 		Title:       "Single Release Landing Page",
@@ -95,7 +95,7 @@ func ProjectList(state model.State) templ.Component {
 				return templ_7745c5c3_Err
 			}
 			for _, tag := range project.Tags {
-				_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<p class=\"relative z-10 rounded-md bg-teal-50 shadow-sm px-3 py-1.5 font-medium text-gray-600 hover:bg-gray-100\">")
+				_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<p class=\"relative z-10 rounded-md bg-teal-50 shadow-sm px-3 py-1.5 font-medium text-gray-600 hover:bg-teal-100\">")
 				if templ_7745c5c3_Err != nil {
 					return templ_7745c5c3_Err
 				}
