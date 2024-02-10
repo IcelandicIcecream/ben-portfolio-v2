@@ -72,7 +72,7 @@ func ProjectList(state model.State) templ.Component {
 			templ_7745c5c3_Var1 = templ.NopComponent
 		}
 		ctx = templ.ClearChildren(ctx)
-		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<div class=\"bg-white py-8 sm:py-14 shadow-xl ring-1 ring-gray-900/5 rounded-xl sm:rounded-md bg-opacity-40\"><div class=\"mx-auto max-w-7xl px-6 lg:px-12\"><h2 class=\"text-3xl font-bold tracking-tight text-gray-600 sm:text-4xl\">Projects</h2><p class=\"mt-2 text-lg leading-8 text-gray-600\">Here are the projects that I've worked on recently</p><!-- Scrollable container --><div class=\"mt-8 overflow-y-auto\" style=\"max-height: 500px; border-top: 1px solid #e2e8f0;\"><div class=\"divide-y divide-gray-200\"><!-- Loop through projects -->")
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<div class=\"bg-white py-8 sm:py-14 shadow-lg ring-1 ring-gray-900/5 rounded-xl sm:rounded-md bg-opacity-40\"><div class=\"mx-auto max-w-7xl px-6 lg:px-12\"><h2 class=\"text-3xl font-bold tracking-tight text-gray-600 sm:text-4xl pl-4\">Projects</h2><p class=\"mt-2 text-lg leading-8 text-gray-600 pl-4\">Here are the projects that I've worked on recently</p><!-- Scrollable container --><div class=\"mt-8 overflow-y-auto\" style=\"max-height: 500px; border-top: 1px solid #e2e8f0;\"><div class=\"divide-y divide-gray-200\"><!-- Loop through projects -->")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
@@ -95,14 +95,14 @@ func ProjectList(state model.State) templ.Component {
 				return templ_7745c5c3_Err
 			}
 			for _, tag := range project.Tags {
-				_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<p class=\"relative z-10 rounded-md bg-indigo-100 px-3 py-1.5 font-medium text-gray-600 hover:bg-gray-100\">")
+				_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<p class=\"relative z-10 rounded-md bg-teal-50 shadow-sm px-3 py-1.5 font-medium text-gray-600 hover:bg-gray-100\">")
 				if templ_7745c5c3_Err != nil {
 					return templ_7745c5c3_Err
 				}
 				var templ_7745c5c3_Var3 string
 				templ_7745c5c3_Var3, templ_7745c5c3_Err = templ.JoinStringErrs(tag)
 				if templ_7745c5c3_Err != nil {
-					return templ.Error{Err: templ_7745c5c3_Err, FileName: `views/components/projectsList.templ`, Line: 66, Col: 121}
+					return templ.Error{Err: templ_7745c5c3_Err, FileName: `views/components/projectsList.templ`, Line: 66, Col: 128}
 				}
 				_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var3))
 				if templ_7745c5c3_Err != nil {

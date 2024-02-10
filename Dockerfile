@@ -25,7 +25,6 @@ WORKDIR /app
 
 # Copy the built binary and configuration file from the build environment
 COPY --from=build-stage /app/main .
-COPY --from=build-stage /app/views ./views
 COPY --from=build-stage /app/styles ./styles
 COPY --from=build-stage /app/assets ./assets
 COPY --from=build-stage /app/.env .

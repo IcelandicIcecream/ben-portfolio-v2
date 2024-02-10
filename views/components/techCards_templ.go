@@ -14,10 +14,9 @@ import model "github.com/icelandicicecream/ben-portfolio-v2/model"
 
 var techCards = []model.TechCard{
 	{
-		Title:       "Go",
-		Description: "I used it for this site.",
-		Rating:      "10",
-		Link:        "https://golang.org/",
+		Title:  "Go",
+		Rating: "10",
+		Link:   "https://golang.org/",
 	},
 	{
 		Title:       "Postgres",
@@ -26,34 +25,29 @@ var techCards = []model.TechCard{
 		Link:        "https://www.postgresql.org/",
 	},
 	{
-		Title:       "Tailwind CSS",
-		Description: "I used it for this site.",
-		Rating:      "8",
-		Link:        "https://tailwindcss.com/",
+		Title:  "Tailwind CSS",
+		Rating: "8",
+		Link:   "https://tailwindcss.com/",
 	},
 	{
-		Title:       "Svelte Kit",
-		Description: "",
-		Rating:      "8",
-		Link:        "https://kit.svelte.dev/",
+		Title:  "Svelte Kit",
+		Rating: "8",
+		Link:   "https://kit.svelte.dev/",
 	},
 	{
-		Title:       "Htmx",
-		Description: "I used it for this site.",
-		Rating:      "10",
-		Link:        "https://htmx.org/",
+		Title:  "Htmx",
+		Rating: "10",
+		Link:   "https://htmx.org/",
 	},
 	{
-		Title:       "Docker",
-		Description: "I used it for this site.",
-		Rating:      "7",
-		Link:        "https://www.docker.com/",
+		Title:  "Docker",
+		Rating: "7",
+		Link:   "https://www.docker.com/",
 	},
 	{
-		Title:       "Templ",
-		Description: "I used it for this site.",
-		Rating:      "10",
-		Link:        "https://github.com/a-h/templ",
+		Title:  "Templ",
+		Rating: "10",
+		Link:   "https://github.com/a-h/templ",
 	},
 }
 
@@ -70,7 +64,7 @@ func TechCards(state model.State) templ.Component {
 			templ_7745c5c3_Var1 = templ.NopComponent
 		}
 		ctx = templ.ClearChildren(ctx)
-		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<div class=\"hidden sm:absolute sm:-top-10 sm:right-1/2 sm:-z-10 sm:mr-10 sm:block sm:transform-gpu sm:blur-3xl\"></div><div class=\"mx-auto max-w-7xl px-6 lg:px-8 flex flex-col space-y-4 w-full justify-between md:flex-row md:space-y-0\"><div>")
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<div class=\"hidden sm:absolute sm:-top-10 sm:right-1/2 sm:-z-10 sm:mr-10 sm:block sm:transform-gpu sm:blur-3xl\"></div><div class=\"mx-auto max-w-7xl px-6 lg:px-8 flex flex-col space-y-10 space-x-0 w-full justify-between md:flex-row md:space-y-0 sm:space-x-10\"><div>")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
@@ -78,12 +72,12 @@ func TechCards(state model.State) templ.Component {
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
-		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</div><div class=\"bg-white p-10 shadow-xl ring-1 ring-gray-900/5 rounded-xl sm:rounded-md bg-opacity-40\"><p class=\"text-sm font-semibold leading-8 text-gray-600 mb-4\">Here are a few technologies I've been working with recently:</p><span class=\"flex items-center justify-end gap-x-2 text-xs leading-5 text-gray-500 max-w-sm\"><p>Ratings on my cool-o-meter:</p></span><ul role=\"list\" class=\"divide-y divide-gray-300\">")
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</div><div class=\"bg-white p-10 shadow-lg ring-1 ring-gray-900/5 rounded-xl sm:rounded-md bg-opacity-40 space-y-10\"><div><p class=\"text-md font-semibold leading-8 text-gray-600 mb-4\">Here are a few technologies I've been working with recently:</p><span class=\"flex items-center justify-end text-xs leading-5 text-gray-500 w-full\"><p class=\"text-right\">Ratings on my cool-o-meter:</p></span><ul role=\"list\" class=\"divide-y divide-gray-300\">")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
 		for _, card := range techCards {
-			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<li class=\"flex flex-wrap items-center justify-between gap-x-6 gap-y-4 py-3 sm:flex-nowrap\"><div><p class=\"text-sm font-semibold leading-6 text-gray-600\"><a href=\"")
+			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<li class=\"flex flex-nowrap items-center justify-between gap-x-6 gap-y-4 py-3\"><div><p class=\"text-sm font-semibold leading-6 text-gray-600\"><a href=\"")
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
@@ -99,20 +93,20 @@ func TechCards(state model.State) templ.Component {
 			var templ_7745c5c3_Var3 string
 			templ_7745c5c3_Var3, templ_7745c5c3_Err = templ.JoinStringErrs(card.Title)
 			if templ_7745c5c3_Err != nil {
-				return templ.Error{Err: templ_7745c5c3_Err, FileName: `views/components/techCards.templ`, Line: 69, Col: 108}
+				return templ.Error{Err: templ_7745c5c3_Err, FileName: `views/components/techCards.templ`, Line: 64, Col: 109}
 			}
 			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var3))
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
-			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</a></p></div><dl class=\"flex w-full flex-none justify-between gap-x-8 sm:w-auto\"><div class=\"flex -space-x-0.5\"><dd><div class=\"flex items-center gap-x-2 text-xs leading-5 text-gray-500\"><p>")
+			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</a></p></div><dl class=\"flex justify-between gap-x-8 w-auto\"><div class=\"flex -space-x-0.5\"><dd><div class=\"flex items-center gap-x-2 text-xs leading-5 text-gray-500\"><p>")
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
 			var templ_7745c5c3_Var4 string
 			templ_7745c5c3_Var4, templ_7745c5c3_Err = templ.JoinStringErrs(card.Rating)
 			if templ_7745c5c3_Err != nil {
-				return templ.Error{Err: templ_7745c5c3_Err, FileName: `views/components/techCards.templ`, Line: 76, Col: 26}
+				return templ.Error{Err: templ_7745c5c3_Err, FileName: `views/components/techCards.templ`, Line: 71, Col: 27}
 			}
 			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var4))
 			if templ_7745c5c3_Err != nil {
@@ -123,7 +117,7 @@ func TechCards(state model.State) templ.Component {
 				return templ_7745c5c3_Err
 			}
 		}
-		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</ul></div></div>")
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</ul></div><div class=\"mt-4 max-w-xl text-sm text-gray-500 text-center\"><p>I also do a bit creative design work by the side.</p><a href=\"https://www.behance.net/benjaminsinidol\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"font-semibold text-teal-600 hover:text-indigo-500\">Check out my behance <span aria-hidden=\"true\">&rarr;</span></a></div><p class=\"text-sm leading-5 text-gray-500 pt-8 text-center\">This site was made purely in Go (Echo + Templ) and Tailwind CSS.</p></div></div>")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
