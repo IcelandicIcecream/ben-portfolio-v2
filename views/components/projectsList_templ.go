@@ -72,37 +72,37 @@ func ProjectList(state model.State) templ.Component {
 			templ_7745c5c3_Var1 = templ.NopComponent
 		}
 		ctx = templ.ClearChildren(ctx)
-		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<div class=\"bg-white py-8 sm:py-14 shadow-lg ring-1 ring-gray-900/5 rounded-xl sm:rounded-md bg-opacity-40\"><div class=\"mx-auto max-w-7xl px-6 lg:px-12\"><h2 class=\"text-4xl font-bold tracking-tight text-gray-600 pl-4\">Projects</h2><p class=\"mt-2 text-2xl leading-8 text-gray-600 pl-4 lg:text-lg\">Here are the projects that I've worked on recently</p><!-- Scrollable container --><div class=\"mt-8 overflow-y-auto\" style=\"max-height: 500px; border-top: 1px solid #e2e8f0;\"><div class=\"divide-y divide-gray-200\"><!-- Loop through projects -->")
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<div class=\"bg-white py-8 sm:py-14 shadow-lg ring-1 ring-gray-900/5 rounded-xl sm:rounded-md bg-opacity-40\"><div class=\"mx-auto max-w-7xl px-6 lg:px-12\"><h2 class=\"text-4xl font-bold tracking-tight text-gray-600 pl-4\">Projects</h2><p class=\"mt-2 text-3xl leading-8 text-gray-600 pl-4 lg:text-lg\">Here are the projects that I've worked on recently</p><!-- Scrollable container --><div class=\"mt-8 overflow-y-auto max-h-[600px]\"><div class=\"divide-y divide-gray-200\"><!-- Loop through projects -->")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
 		for _, project := range projects {
-			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<article class=\"flex flex-col items-start justify-between p-4 lg:max-w-xl\"><div class=\"mb-4 flex items-center gap-x-4 text-xl mt-6 lg:text-xs\"><time class=\"text-gray-500\">")
+			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<article class=\"flex flex-col items-start justify-between p-4 lg:max-w-xl\"><div class=\"mb-4 flex items-center gap-x-4 text-xl mt-6 lg:text-xs\"><time class=\"text-gray-500 text-2xl lg:text-xs\">")
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
 			var templ_7745c5c3_Var2 string
 			templ_7745c5c3_Var2, templ_7745c5c3_Err = templ.JoinStringErrs(project.Date)
 			if templ_7745c5c3_Err != nil {
-				return templ.Error{Err: templ_7745c5c3_Err, FileName: `views/components/projectsList.templ`, Line: 63, Col: 50}
+				return templ.Error{Err: templ_7745c5c3_Err, FileName: `views/components/projectsList.templ`, Line: 63, Col: 70}
 			}
 			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var2))
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
-			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</time> <span class=\"flex flex-row items-center gap-x-2 text-xl lg:text-xs\">")
+			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</time> <span class=\"flex flex-row items-center gap-x-2 text-2xl lg:text-xs\">")
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
 			for _, tag := range project.Tags {
-				_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<p class=\"relative z-10 rounded-md bg-teal-50 shadow-sm px-3 py-1.5 font-medium text-gray-600 hover:bg-teal-100\">")
+				_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<p class=\"relative z-10 rounded-md bg-teal-50 shadow-sm px-3 py-3 font-medium text-gray-600 hover:bg-teal-100 lg:py-1.5\">")
 				if templ_7745c5c3_Err != nil {
 					return templ_7745c5c3_Err
 				}
 				var templ_7745c5c3_Var3 string
 				templ_7745c5c3_Var3, templ_7745c5c3_Err = templ.JoinStringErrs(tag)
 				if templ_7745c5c3_Err != nil {
-					return templ.Error{Err: templ_7745c5c3_Err, FileName: `views/components/projectsList.templ`, Line: 66, Col: 128}
+					return templ.Error{Err: templ_7745c5c3_Err, FileName: `views/components/projectsList.templ`, Line: 66, Col: 136}
 				}
 				_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var3))
 				if templ_7745c5c3_Err != nil {
@@ -113,7 +113,7 @@ func ProjectList(state model.State) templ.Component {
 					return templ_7745c5c3_Err
 				}
 			}
-			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</span></div><div class=\"group relative\"><h3 class=\"mb-2 text-2xl font-semibold leading-6 text-gray-600 group-hover:text-gray-600 lg:text-lg\"><a href=\"")
+			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</span></div><div class=\"group relative\"><h3 class=\"mb-4 text-3xl font-semibold leading-10 text-gray-600 group-hover:text-gray-600 lg:text-lg lg:mb-2\"><a href=\"")
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
@@ -135,14 +135,14 @@ func ProjectList(state model.State) templ.Component {
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
-			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</a></h3><p class=\"mb-6 line-clamp-3 text-xl leading-6 text-gray-600 lg:text-sm\">")
+			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</a></h3><p class=\"mb-4 line-clamp-3 text-3xl leading-10 text-gray-600 lg:text-sm\">")
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
 			var templ_7745c5c3_Var6 string
 			templ_7745c5c3_Var6, templ_7745c5c3_Err = templ.JoinStringErrs(project.Description)
 			if templ_7745c5c3_Err != nil {
-				return templ.Error{Err: templ_7745c5c3_Err, FileName: `views/components/projectsList.templ`, Line: 77, Col: 101}
+				return templ.Error{Err: templ_7745c5c3_Err, FileName: `views/components/projectsList.templ`, Line: 77, Col: 103}
 			}
 			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var6))
 			if templ_7745c5c3_Err != nil {
