@@ -64,7 +64,7 @@ func TechCards(state model.State) templ.Component {
 			templ_7745c5c3_Var1 = templ.NopComponent
 		}
 		ctx = templ.ClearChildren(ctx)
-		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<div class=\"hidden sm:absolute sm:-top-10 sm:right-1/2 sm:-z-10 sm:mr-10 sm:block sm:transform-gpu sm:blur-3xl\"></div><div class=\"mx-auto max-w-7xl px-6 lg:px-8 flex flex-col space-y-16 space-x-0 w-full justify-between lg:flex-row md:space-y-0 lg:space-x-10\"><div>")
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<div class=\"hidden sm:absolute sm:-top-10 sm:right-1/2 sm:-z-10 sm:mr-10 sm:block sm:transform-gpu sm:blur-3xl\"></div><div class=\"mx-auto max-w-7xl px-6 lg:px-8 flex flex-col space-y-16 space-x-0 w-full justify-between lg:flex-row md:space-y-0 lg:space-x-10\"><div class=\"pb-20 lg:pb-0\">")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
@@ -72,12 +72,12 @@ func TechCards(state model.State) templ.Component {
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
-		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</div><div class=\"bg-white p-10 shadow-lg ring-1 ring-gray-900/5 rounded-xl sm:rounded-md bg-opacity-40 space-y-10\"><div><p class=\"text-md font-semibold leading-8 text-gray-600 mb-4\">Here are a few technologies I've been working with recently:</p><span class=\"flex items-center justify-end text-xs leading-5 text-gray-500 w-full\"><p class=\"text-right\">Ratings on my cool-o-meter:</p></span><ul role=\"list\" class=\"divide-y divide-gray-300\">")
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</div><div class=\"bg-white p-10 shadow-lg ring-1 ring-gray-900/5 rounded-xl sm:rounded-md bg-opacity-40 space-y-10\"><div><p class=\"text-2xl font-semibold leading-8 text-gray-600 mb-6 lg:text-md\">Here are a few technologies I've been working with recently:</p><span class=\"flex items-center justify-end text-md leading-5 text-gray-500 w-full lg:text-xs\"><p class=\"text-right\">Ratings on my cool-o-meter:</p></span><ul role=\"list\" class=\"divide-y divide-gray-300\">")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
 		for _, card := range techCards {
-			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<li class=\"flex flex-nowrap items-center justify-between gap-x-6 gap-y-4 py-3\"><div><p class=\"text-sm font-semibold leading-6 text-gray-600\"><a href=\"")
+			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<li class=\"flex flex-nowrap items-center justify-between gap-x-6 gap-y-4 py-3\"><div><p class=\"text-xl font-semibold leading-6 text-gray-600 lg:text-sm\"><a href=\"")
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
@@ -99,7 +99,7 @@ func TechCards(state model.State) templ.Component {
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
-			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</a></p></div><dl class=\"flex justify-between gap-x-8 w-auto\"><div class=\"flex -space-x-0.5\"><dd><div class=\"flex items-center gap-x-2 text-xs leading-5 text-gray-500\"><p>")
+			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</a></p></div><dl class=\"flex justify-between gap-x-8 w-auto\"><div class=\"flex -space-x-0.5\"><dd><div class=\"flex items-center gap-x-2 text-xl leading-5 text-gray-500 lg:text-xs\"><p>")
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
@@ -117,7 +117,7 @@ func TechCards(state model.State) templ.Component {
 				return templ_7745c5c3_Err
 			}
 		}
-		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</ul></div><div class=\"text-sm leading-5 text-gray-500 pt-8 text-center\"><p>I also do a bit creative design work by the side.</p><a href=\"https://www.behance.net/benjaminsinidol\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"font-semibold text-teal-600 hover:text-indigo-500\">Check out my behance <span aria-hidden=\"true\">&rarr;</span></a></div><p class=\"text-sm leading-5 text-gray-500 pt-8 text-center\">This <a href=\"https://github.com/IcelandicIcecream/ben-portfolio-v2\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"underline\">site</a> was made purely in Go (Echo + Templ) and Tailwind CSS.</p></div></div>")
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</ul></div><div class=\"text-xl leading-6 text-gray-500 pt-8 text-center lg:text-sm\"><p>I also do a bit creative design work by the side.</p><a href=\"https://www.behance.net/benjaminsinidol\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"font-semibold text-teal-600 hover:text-indigo-500\">Check out my behance <span aria-hidden=\"true\">&rarr;</span></a></div><p class=\"text-xl leading-5 text-gray-500 pt-8 text-center lg:text-sm\">This <a href=\"https://github.com/IcelandicIcecream/ben-portfolio-v2\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"underline\">site</a> was made purely in Go (Echo + Templ) and Tailwind CSS.</p></div></div>")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
