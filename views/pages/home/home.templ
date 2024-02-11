@@ -13,14 +13,14 @@ templ Home(state model.State) {
 			<div class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80" aria-hidden="true">
 				<div class="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
 			</div>
-			<div class="mx-auto max-w-3xl py-32 sm:py-48 lg:py-56">
+			<div class="mx-auto max-w-3xl py-32 sm:py-48 lg:pt-56 lg:pb-32">
 				<div class="hidden sm:mb-8 sm:flex sm:justify-center"></div>
 				<div class="text-center space-y-8 mx-auto px-6">
 					<h1 id="hero-title" class="text-3xl font-bold tracking-tight text-gray-600 sm:text-6xl"></h1>
 					<p id="hero-subtitle" class="mt-6 text-lg leading-8 text-gray-600 transition-opacity">
 						I'm Ben, a full-stack developer based in Kuala Lumpur, Malaysia. I spend my time looking at new tech, discovering memes and playing video games when I'm not spending time with my dog.
 					</p>
-					<div class="text-gray-600 space-x-2 flex flex-row justify-center">
+					<div class="text-gray-600 space-x-2 flex flex-row justify-center items-center">
 						<a href="https://github.com/icelandicicecream" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-x-2 text-sm font-semibold leading-6 text-gray-900">
 							<span class="w-8 h-8 text-gray-600">
 								<svg viewBox="0 0 24 24" aria-hidden="true">
@@ -44,13 +44,19 @@ templ Home(state model.State) {
 							</span>
 						</a>
 					</div>
-					<div class="mt-10 flex items-center justify-center gap-x-6"></div>
+					<span class="flex w-full justify-center pt-10">
+						<svg class="w-6 h-6 text-gray-600 animate-bounce" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 8">
+							<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 5.326 5.7a.909.909 0 0 0 1.348 0L13 1"></path>
+						</svg>
+					</span>
 				</div>
 			</div>
 			<div class="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]" aria-hidden="true">
 				<div class="relative left-[calc(50%+3rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem]" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
 			</div>
-			@components.TechCards(state)
+			<div class="pb-24">
+				@components.TechCards(state)
+			</div>
 		</div>
 	}
 	@components.TypingEffect(heroTitle, "hero-title", 100)
