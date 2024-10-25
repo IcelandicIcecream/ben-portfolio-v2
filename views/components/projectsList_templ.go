@@ -15,6 +15,21 @@ import model "github.com/icelandicicecream/ben-portfolio-v2/model"
 var projects = []model.ProjectCard{
 	{
 		// Create a write-up
+		Title:       "AI Powered Accounting Software",
+		Tags:        []string{"Go", "Svelte Kit", "PostgreSQL", "OpenAI API"},
+		Date:        "Oct 25, 2024",
+		Description: "An accounting software with a built-in AI interface to creating transactions and understanding your accounting data",
+		Link:        "https://debits.epicstartups.co/",
+	},
+	{
+		Title:       "Self Hosted Blog",
+		Tags:        []string{"Docker", "Ghost", "Fly"},
+		Date:        "Oct 25, 2024",
+		Description: "A self hosted blog built with Ghost and Fly.io. I built this to learn more about the platform and how to deploy a blog.",
+		Link:        "https://ben-ghost-blog.fly.dev/",
+	},
+	{
+		// Create a write-up
 		Title:       "OpenAI Go Chat Bot",
 		Tags:        []string{"Go", "OpenAI API", "Svelte"},
 		Date:        "Feb 25, 2024",
@@ -92,7 +107,7 @@ func ProjectList(state model.State) templ.Component {
 			var templ_7745c5c3_Var2 string
 			templ_7745c5c3_Var2, templ_7745c5c3_Err = templ.JoinStringErrs(project.Date)
 			if templ_7745c5c3_Err != nil {
-				return templ.Error{Err: templ_7745c5c3_Err, FileName: `views/components/projectsList.templ`, Line: 71, Col: 70}
+				return templ.Error{Err: templ_7745c5c3_Err, FileName: `views/components/projectsList.templ`, Line: 86, Col: 70}
 			}
 			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var2))
 			if templ_7745c5c3_Err != nil {
@@ -110,7 +125,7 @@ func ProjectList(state model.State) templ.Component {
 				var templ_7745c5c3_Var3 string
 				templ_7745c5c3_Var3, templ_7745c5c3_Err = templ.JoinStringErrs(tag)
 				if templ_7745c5c3_Err != nil {
-					return templ.Error{Err: templ_7745c5c3_Err, FileName: `views/components/projectsList.templ`, Line: 74, Col: 136}
+					return templ.Error{Err: templ_7745c5c3_Err, FileName: `views/components/projectsList.templ`, Line: 89, Col: 136}
 				}
 				_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var3))
 				if templ_7745c5c3_Err != nil {
@@ -137,7 +152,7 @@ func ProjectList(state model.State) templ.Component {
 			var templ_7745c5c3_Var5 string
 			templ_7745c5c3_Var5, templ_7745c5c3_Err = templ.JoinStringErrs(project.Title)
 			if templ_7745c5c3_Err != nil {
-				return templ.Error{Err: templ_7745c5c3_Err, FileName: `views/components/projectsList.templ`, Line: 82, Col: 25}
+				return templ.Error{Err: templ_7745c5c3_Err, FileName: `views/components/projectsList.templ`, Line: 97, Col: 25}
 			}
 			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var5))
 			if templ_7745c5c3_Err != nil {
@@ -150,7 +165,7 @@ func ProjectList(state model.State) templ.Component {
 			var templ_7745c5c3_Var6 string
 			templ_7745c5c3_Var6, templ_7745c5c3_Err = templ.JoinStringErrs(project.Description)
 			if templ_7745c5c3_Err != nil {
-				return templ.Error{Err: templ_7745c5c3_Err, FileName: `views/components/projectsList.templ`, Line: 85, Col: 103}
+				return templ.Error{Err: templ_7745c5c3_Err, FileName: `views/components/projectsList.templ`, Line: 100, Col: 103}
 			}
 			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var6))
 			if templ_7745c5c3_Err != nil {

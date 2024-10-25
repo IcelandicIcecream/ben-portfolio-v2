@@ -1,8 +1,23 @@
-package components 
+package components
 
 import model "github.com/icelandicicecream/ben-portfolio-v2/model"
 
 var projects = []model.ProjectCard{
+	{
+		// Create a write-up
+		Title:       "AI Powered Accounting Software",
+		Tags:        []string{"Go", "Svelte Kit", "PostgreSQL", "OpenAI API"},
+		Date:        "Oct 25, 2024",
+		Description: "An accounting software with a built-in AI interface to creating transactions and understanding your accounting data",
+		Link:        "https://debits.epicstartups.co/",
+	},
+	{
+		Title:       "Self Hosted Blog",
+		Tags:        []string{"Docker", "Ghost", "Fly"},
+		Date:        "Oct 25, 2024",
+		Description: "A self hosted blog built with Ghost and Fly.io. I built this to learn more about the platform and how to deploy a blog.",
+		Link:        "https://ben-ghost-blog.fly.dev/",
+	},
 	{
 		// Create a write-up
 		Title:       "OpenAI Go Chat Bot",
