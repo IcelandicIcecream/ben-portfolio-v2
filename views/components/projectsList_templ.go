@@ -19,7 +19,7 @@ var projects = []model.ProjectCard{
 		Tags:        []string{"Go", "Svelte Kit", "PostgreSQL", "OpenAI API"},
 		Date:        "Oct 25, 2024",
 		Description: "An accounting software with a built-in AI interface to creating transactions and understanding your accounting data",
-		Link:        "https://debits.epicstartups.co/",
+		Link:        "https://ben-ghost-blog.fly.dev/building-an-accounting-software-from-scratch-2/",
 	},
 	{
 		Title:       "Self Hosted Blog",
